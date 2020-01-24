@@ -1,9 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Encypt">
+    android:background="#c8d6e5"
+    tools:context=".Encrypt">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/outputText"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp"
+        android:background="#00E5FF"
+        android:gravity="center"
+        android:text="decrypt"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="HASH STRING GENERATED"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="RELATIVE SPEED:"
+        android:id="@+id/speed"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:text="KEY LENGTH:"
+    android:id="@+id/keylength"
+    android:textStyle="bold"
+    android:textSize="22sp"
+    android:layout_below="@+id/speed"
+    android:textColor="@color/colorPrimaryDark"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="BLOCK SIZE:"
+        android:id="@+id/blocksize"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/keylength"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="CIPHER TEXT TYPE:"
+        android:id="@+id/cipher"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/blocksize"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="NO OF ROUNDS : "
+        android:id="@+id/rounds"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/cipher"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="SECURITY LEVEL: "
+        android:id="@+id/security"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_below="@+id/rounds"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="190dp"
+        android:orientation="vertical"
+        android:padding="9dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/relativeSpeed"
+            android:text="HELLO"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/keyLength"
+            android:text="Block"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/blockSize"
+            android:text="HELLO"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/cipherTextType"
+            android:text="HELLO"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/noOfRounds"
+            android:text="HELLO"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/securityLevel"
+            android:text="HELLO"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

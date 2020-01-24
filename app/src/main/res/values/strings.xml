@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EandD</string>
+    <array name="algos_array">
+        <item>AES</item>
+        <item>DES</item>
+        <item>BlowFish</item>
+    </array>
+
 </resources>

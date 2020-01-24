@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#c8d6e5"
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
         <EditText
             android:id="@+id/input"
             android:layout_width="308dp"
             android:layout_height="44dp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="42dp"
-            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:layout_below="@+id/message"
             android:hint="enter message"
             android:textSize="20sp" />
 
@@ -28,35 +28,70 @@
             android:layout_width="303dp"
             android:layout_height="46dp"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/input"
-            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="142dp"
             android:hint="enter password "
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/encrypt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="173dp"
-            android:text="encrypt" />
-
-        <Button
-            android:id="@+id/decrypt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="decrypt" />
-
-        <TextView
-            android:id="@+id/outputText"
-            android:layout_width="340dp"
-            android:layout_height="44dp"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:textColor="#FFFFFF"
+            android:background="#00E5FF"
+            android:textStyle="bold"
+            android:textSize="19sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="158dp"
-            android:textSize="22sp" />
+            android:layout_marginBottom="270dp"
+            android:text="encrypt" />
+
+        <TextView
+            android:id="@+id/algoname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/password"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="SELECT THE ALGORITHM"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="ENTER THE MESSAGE"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/input"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="8dp"
+            android:text="ENTER PASSWORD"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/algoname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:entries="@array/algos_array">
+
+        </Spinner>
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
